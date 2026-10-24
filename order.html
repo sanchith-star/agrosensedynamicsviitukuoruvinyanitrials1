@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order InfraNova | Smart Infrastructure</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="logo">INFRA<span>NOVA</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="problems.html">Problems</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="system.html">System</a>
+            <a href="order.html" class="active">Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="page-heading">
+    <span class="tag">BRING SMART MONITORING TO LIFE</span>
+    <h1>ORDER <span class="glow">INFRANOVA</span></h1>
+    <p>
+        Submit your enquiry or order request for the InfraNova
+        smart infrastructure monitoring system.
+    </p>
+</section>
+
+<section>
+    <div class="container">
+
+        <div class="card" style="max-width:750px;margin:auto;text-align:center">
+
+            <div class="icon">🏙️</div>
+
+            <h2>InfraNova Monitoring System</h2>
+
+            <p>
+                An AI-powered infrastructure monitoring concept
+                designed to support road-hazard identification
+                and connected reporting.
+            </p>
+
+            <div class="price">₹4,999</div>
+
+            <p>Listed price per unit</p>
+
+            <p class="form-note" style="margin-top:15px">
+                Final availability, included components, shipping,
+                and applicable charges should be confirmed before purchase.
+            </p>
+
+        </div>
+
+        <form action="https://formsubmit.co/svdiitcomp3@gmail.com"
+              method="POST">
+
+            <h2 style="color:var(--blue);margin-bottom:10px">
+                ORDER REQUEST
+            </h2>
+
+            <p class="form-note">
+                Fill in the details below. Your request will be
+                submitted by email after the form service is activated.
+            </p>
+
+            <input type="hidden" name="_subject"
+                   value="New InfraNova Order Request">
+
+            <input type="hidden" name="_template" value="table">
+
+            <input type="hidden" name="_captcha" value="true">
+
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="Full Name"
+                   placeholder="Enter your full name"
+                   required maxlength="100">
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="Customer Email"
+                   placeholder="Enter your email"
+                   required maxlength="150">
+
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="Phone Number"
+                   placeholder="Enter your phone number"
+                   required maxlength="20">
+
+            <label for="address">Delivery Address *</label>
+            <textarea id="address" name="Delivery Address"
+                      placeholder="House number, street, city, state and PIN code"
+                      required maxlength="1000"></textarea>
+
+            <label for="quantity">Quantity *</label>
+            <input type="number" id="quantity" name="Quantity"
+                   min="1" max="100" value="1" required>
+
+            <label for="total">Calculated Total (INR)</label>
+            <input type="text" id="total"
+                   name="Calculated Total"
+                   value="₹4,999" readonly>
+
+            <label for="payment">Preferred Payment Method *</label>
+            <select id="payment" name="Preferred Payment Method" required>
+                <option value="">Select a payment method</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Debit/Credit Card</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+                <option value="Discuss Later">Discuss Later</option>
+            </select>
+
+            <label for="notes">Additional Requirements</label>
+            <textarea id="notes" name="Additional Requirements"
+                      placeholder="Any questions or special requirements?"
+                      maxlength="1000"></textarea>
+
+            <p class="form-note">
+                Submitting this form sends an order request, not a
+                confirmed purchase or payment. The seller must confirm
+                availability, delivery, and final charges.
+            </p>
+
+            <button type="submit" class="btn btn-primary"
+                    style="width:100%">
+                SUBMIT ORDER REQUEST →
+            </button>
+
+        </form>
+
+        <div class="buttons">
+            <a href="index.html" class="btn btn-outline">← Back to Home</a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="logo">INFRA<span>NOVA</span></div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="problems.html">Problems</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="system.html">System</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 InfraNova. All rights reserved.</p>
+</footer>
+
+<script>
+const quantityInput = document.getElementById("quantity");
+const totalInput = document.getElementById("total");
+
+const PRICE = 4999;
+
+function updateTotal() {
+    let quantity = Number(quantityInput.value);
+
+    if (!Number.isFinite(quantity) || quantity < 1) {
+        quantity = 1;
+    }
+
+    if (quantity > 100) {
+        quantity = 100;
+    }
+
+    const total = PRICE * quantity;
+
+    totalInput.value = "₹" + total.toLocaleString("en-IN");
+}
+
+quantityInput.addEventListener("input", updateTotal);
+
+quantityInput.addEventListener("change", function() {
+    let quantity = Number(this.value);
+
+    if (!Number.isFinite(quantity) || quantity < 1) {
+        quantity = 1;
+    }
+
+    if (quantity > 100) {
+        quantity = 100;
+    }
+
+    this.value = quantity;
+    updateTotal();
+});
+
+updateTotal();
+</script>
+
+</body>
+</html>
