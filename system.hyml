@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System Architecture | InfraNova</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html" class="logo">INFRA<span>NOVA</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="problems.html">Problems</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="system.html" class="active">System</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="page-heading">
+    <span class="tag">HARDWARE + SOFTWARE + AI</span>
+    <h1>SYSTEM <span class="glow">ARCHITECTURE</span></h1>
+    <p>
+        InfraNova is a proposed intelligent infrastructure monitoring
+        system that combines image capture, AI-based analysis,
+        communication, and a monitoring interface.
+    </p>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">SYSTEM <span class="glow">BLOCK DIAGRAM</span></h2>
+
+        <p class="section-subtitle">
+            The following diagram shows the proposed flow of information.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">📷</div>
+                <h3>01. ESP32-CAM</h3>
+                <p>
+                    Captures images of roads and nearby infrastructure.
+                    Camera placement and capture intervals depend
+                    on the deployment requirements.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧠</div>
+                <h3>02. AI Processing</h3>
+                <p>
+                    A trained computer-vision model analyses images
+                    for supported categories such as potholes,
+                    open manholes, or accidents.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📡</div>
+                <h3>03. Communication</h3>
+                <p>
+                    A suitable Wi-Fi or cellular connection
+                    transmits detections and available image
+                    information to a server or dashboard.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖥️</div>
+                <h3>04. Dashboard</h3>
+                <p>
+                    Displays received reports, detection categories,
+                    timestamps, and location information when
+                    a location source is available.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>BLOCK DIAGRAM FLOW</h3>
+            <p>
+                Roadside Camera → Image Capture → AI Analysis →
+                Communication Network → Monitoring Dashboard →
+                Human Verification → Appropriate Response
+            </p>
+        </div>
+
+        <h2 class="section-title" style="margin-top:65px">
+            HARDWARE <span class="glow">COMPONENTS</span>
+        </h2>
+
+        <p class="section-subtitle">
+            The components below describe a possible prototype
+            configuration. Final components depend on the selected
+            monitoring features.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>ESP32-CAM</h3>
+                <p>
+                    Captures visual information from a selected
+                    infrastructure location.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Power Supply</h3>
+                <p>
+                    Provides suitable power to the camera and
+                    processing hardware. Solar power may be used
+                    where appropriate.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Communication Module</h3>
+                <p>
+                    Wi-Fi or a suitable cellular module can
+                    communicate data to a remote interface.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Optional Sensors</h3>
+                <p>
+                    Soil-moisture, vibration, or other suitable
+                    sensors can support additional landslide
+                    monitoring experiments.
+                </p>
+            </div>
+
+        </div>
+
+        <h2 class="section-title" style="margin-top:65px">
+            SOFTWARE <span class="glow">COMPONENTS</span>
+        </h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Embedded Programming</h3>
+                <p>
+                    Arduino IDE and compatible firmware can
+                    configure the ESP32-CAM and manage image capture.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Computer Vision</h3>
+                <p>
+                    A trained AI model processes images to recognise
+                    the supported infrastructure categories.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Dashboard</h3>
+                <p>
+                    A web interface can present incoming detections
+                    and help authorised users review incidents.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>IMPORTANT TECHNICAL NOTE</h3>
+            <p>
+                GitHub Pages hosts this informational website; it does
+                not itself run continuous AI processing or receive
+                ESP32-CAM alerts. Those functions require additional
+                firmware, an AI-processing environment, a server,
+                and a communication method. Landslide prediction
+                also requires suitable validated sensors or models.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="solutions.html" class="btn btn-outline">← Previous Page</a>
+            <a href="order.html" class="btn btn-primary">View Product →</a>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="logo">INFRA<span>NOVA</span></div>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="problems.html">Problems</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="system.html">System</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p>© 2026 InfraNova. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
